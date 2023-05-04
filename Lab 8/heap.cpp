@@ -70,4 +70,5 @@ int main()
   
    cout << "Sorted array"<<endl;
    displayArray(heap_arr, length);
+   return 0;
 }
