@@ -50,10 +50,14 @@ void displayArray(int arr[], int n)
   
 // main program
 int main()
-{  int length;
+{  
+   //length of the heap array
+   int length;
    cout<<"Enter the array length: ";
    cin>>length;
    int heap_arr[length];
+   
+   //getting the elements for the heap.
    cout<<"Enter the array elements: ";
    for (int i = 0; i<length; i++){
       cin>>heap_arr[i];
