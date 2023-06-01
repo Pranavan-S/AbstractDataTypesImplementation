@@ -23,11 +23,12 @@ vector<int> dijkstra(vector<vector<int>>& graph, int src){
         
         for (int v=0; v<n; v++){
             if (graph[u][v] !=0 && !visited[v]){
-                vertexOrder.push({graph[u][v],v});
+
                 // relaxing edge (u,v)
                 if (distance[v] > distance[u] + graph[u][v]){
                     distance[v] = distance[u] + graph[u][v];
                 }
+                vertexOrder.push({distance[v],v});
             }
         }
     }
@@ -45,7 +46,7 @@ vector<int> dijkstra(vector<vector<int>>& graph, int src){
             {5,0,0,20,0,0}
             };
 
-    int src = 5; // change src to change the source city.
+    int src = 3; // change src to change the source city.
 
     vector<int> dist = dijkstra(graph, src);
 
